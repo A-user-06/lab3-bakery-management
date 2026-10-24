@@ -1,0 +1,46 @@
+# Пользователь-мигратор (с правами DDL) — для Flyway
+DB_MIGRATION_URL=jdbc:postgresql://localhost:5432/bakery_db
+DB_MIGRATION_USER=bakery_migrator
+DB_MIGRATION_PASSWORD=migrator_pass_123
+
+# Пользователь приложения (только DML) — для Hibernate
+DB_APP_URL=jdbc:postgresql://localhost:5432/bakery_db
+DB_APP_USER=bakery_app_user
+DB_APP_PASSWORD=app_pass_123
+
+
+
+
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
