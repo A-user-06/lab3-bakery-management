@@ -5,6 +5,11 @@ spring:
     password: app_pass_123
     driver-class-name: org.postgresql.Driver
 
+jwt:
+  secret: "change-me-super-secret-key-at-least-32-bytes-long!!"
+  access-expiration-ms: 900000        # 15 минут
+  refresh-expiration-ms: 604800000    # 7 дней
+
   jpa:
     hibernate:
       ddl-auto: none
@@ -21,3 +26,7 @@ spring:
     password: migrator_pass_123
     locations: classpath:db/migration
     baseline-on-migrate: true
+    spring:
+      flyway:
+        enabled: true
+        locations: classpath:db/migration
